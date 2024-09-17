@@ -13,16 +13,22 @@ public class ScaledArea : UdonSharpBehaviour
 
     public override void OnPlayerTriggerEnter(VRCPlayerApi player)
     {
-        originalScale = player.GetAvatarEyeHeightAsMeters();
-        player.SetAvatarEyeHeightByMeters(desiredScale);
+        if (player.isLocal)
+        {
+            originalScale = player.GetAvatarEyeHeightAsMeters();
+            player.SetAvatarEyeHeightByMeters(desiredScale);
 
-        base.OnPlayerTriggerEnter(player);
+            base.OnPlayerTriggerEnter(player);
+        }
     }
 
     public override void OnPlayerTriggerExit(VRCPlayerApi player)
     {
-        player.SetAvatarEyeHeightByMeters(originalScale);
+        if (player.isLocal)
+        {
+            player.SetAvatarEyeHeightByMeters(originalScale);
 
-        base.OnPlayerTriggerExit(player);
+            base.OnPlayerTriggerExit(player);
+        }
     }
 }
