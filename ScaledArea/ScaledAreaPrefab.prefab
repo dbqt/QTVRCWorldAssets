@@ -56,7 +56,10 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 6479759272194939642}
-  desiredScale: 1
+  desiredScale: 0.1
+  desiredJumpImpulse: 2
+  desiredWalkSpeed: 0.5
+  desiredRunSpeed: 1
 --- !u!114 &6479759272194939642
 MonoBehaviour:
   m_ObjectHideFlags: 0
