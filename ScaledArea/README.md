@@ -6,6 +6,8 @@ This prefab defines an area where users will automatically be scaled to a specif
 
 ![Imgur](https://i.imgur.com/kn64j7L.gif)
 
+[Japanese / 日本語](./README.ja.md)
+
 ## Requirements
 You need the latest [VRCSDK](https://creators.vrchat.com/sdk/) for worlds installed. It's recommended to use the VRChat Creator Companion to setup a project with the correct VRCSDK.
 
@@ -21,5 +23,9 @@ If you are using this in a [Vket booth](https://event.vket.com/en), make sure to
 
 ## Version history
 v1.0.0 : Initial release
+
 v1.0.1 : Fixed sometimes not working with multiple users
+
 v1.0.2 : Added customization of walk speed, run speed, jump impulse
+
+v1.0.3 : Added instructions for Japanese

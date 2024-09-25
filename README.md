@@ -4,6 +4,8 @@ A collection of VRC world assets.
 
 ![GitHub](https://img.shields.io/github/license/dbqt/QTVRCWorldAssets)
 
+[Japanese / 日本語](./README.ja.md)
+
 ## Scaled Area
 
 ![Imgur](https://i.imgur.com/kn64j7L.gif)
