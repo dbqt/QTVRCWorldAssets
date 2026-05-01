@@ -20,12 +20,3 @@ You need the latest [VRCSDK](https://creators.vrchat.com/sdk/) for worlds instal
 
 ## Notes
 If you are using this in a [Vket booth](https://event.vket.com/en), make sure to move the `Scripts` folder into the submission folder.
-
-## Version history
-v1.0.0 : Initial release
-
-v1.0.1 : Fixed sometimes not working with multiple users
-
-v1.0.2 : Added customization of walk speed, run speed, jump impulse
-
-v1.0.3 : Added instructions for Japanese

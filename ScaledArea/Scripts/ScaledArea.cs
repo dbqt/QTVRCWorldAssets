@@ -6,7 +6,10 @@
 
     public class ScaledArea : UdonSharpBehaviour
     {
-        [SerializeField, Tooltip("Set the desired height for the avatar to scale to while inside the area")]
+        [SerializeField, Tooltip("Whether to use direct scaling or proportional scaling. Direct scaling will set the avatar to a specific height, while proportional scaling will scale the avatar by a multiplier of their original height.")]
+        private bool directScaling = true;
+
+        [SerializeField, Tooltip("Set the desired height for the avatar to scale to while inside the area. If direct scaling is enabled, this is the scale in meters. Otherwise, this is a percentage of the original scale.")]
         private float desiredScale = 0.1f;
 
         [SerializeField, Tooltip("Set the desired jump impulse force for the avatar to use inside the area")]
@@ -35,7 +38,15 @@
                 originalWalkSpeed = player.GetWalkSpeed();
                 originalRunSpeed = player.GetRunSpeed();
 
-                player.SetAvatarEyeHeightByMeters(desiredScale);
+                if (directScaling) 
+                {
+                    player.SetAvatarEyeHeightByMeters(desiredScale);
+                }
+                else
+                {
+                    player.SetAvatarEyeHeightByMultiplier(desiredScale);
+                }
+
                 player.SetJumpImpulse(desiredJumpImpulse);
                 player.SetStrafeSpeed(desiredWalkSpeed);
                 player.SetWalkSpeed(desiredWalkSpeed);
